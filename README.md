@@ -1,3 +1,7 @@
+### Persona using nextJS
+
+![](https://raw.githubusercontent.com/reinskywalker/nextjs-persona/main/docs/img.png)
+
 ### Key Features
 
 - **Dynamic Theme Switching**: Implemented dark and light mode toggling for enhanced user experience.
