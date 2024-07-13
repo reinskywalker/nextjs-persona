@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
         <title>Reynaldi Lusikooy | Portfolio</title>
         <meta name="description" content="A bit of myself." />
-        <link rel="icon" href="/avatar.ico" />
+        <link rel="icon" href="/image/avatar.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
