@@ -39,7 +39,7 @@ export default function Home() {
               Andre <strong>Reynaldi</strong> Lusikooy.
             </h2>
             <h3 className='text-2xl md:text-3xl dark:text-white'>
-              Fullstack Engineer | SDET | Test Engineer | DevOps Automation Enthusiast
+              Fullstack Engineer | SDET | DevOps Automation Enthusiast
             </h3>
             <p className='text-md py-5 leading-8 max-w-xl mx-auto dark:text-gray-200'>
               Specializing in Arduino, drone projects, and DevOps automation management.
