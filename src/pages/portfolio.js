@@ -1,25 +1,25 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { AiFillTwitterCircle, AiFillYoutube, AiFillGithub, AiFillBehanceSquare } from 'react-icons/ai';
-import reinskywalker from '@img/avatar.png';
+import works from '../data/works';
 
-export default function Home() {
+export default function Portfolio() {
     const [darkMode, setDarkMode] = useState(false);
-    const router = useRouter(); 
+    const router = useRouter();
 
     return (
         <div className={darkMode ? 'dark' : ''}>
+
             <Head>
                 <title>Reynaldi Lusikooy | Portfolio</title>
-                <meta name="description" content="A bit of myself." />
+                <meta name="description" content="Resume of Andre Reynaldi Lusikooy" />
                 <link rel="icon" href="/image/avatar.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             </Head>
+
             <main className="bg-white dark:bg-gray-900">
                 <section className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-24 xl:px-36 2xl:px-[20%]">
 
@@ -29,13 +29,11 @@ export default function Home() {
                         </h1>
                         <ul className="flex items-center space-x-8">
                             <li className={`hover:text-rose-500 cursor-pointer ${router.pathname === '/' ? 'text-rose-500' : ''}`}>
-
                                 <Link href="/" passHref>
                                     Home
                                 </Link>
                             </li>
                             <li className={`hover:text-rose-500 cursor-pointer ${router.pathname === '/portfolio' ? 'text-rose-500' : ''}`}>
-
                                 <Link href="/portfolio" passHref>
                                     Portfolio
                                 </Link>
@@ -46,7 +44,7 @@ export default function Home() {
                         </ul>
                     </nav>
 
-                    <div className="text-center">
+                    <div className="text-center max-w-3xl mx-auto">
                         <h2 className="text-5xl py-2 text-rose-500 dark:text-rose-300 font-bold md:text-6xl">
                             Andre <strong>Reynaldi</strong> Lusikooy.
                         </h2>
@@ -54,20 +52,26 @@ export default function Home() {
                             Fullstack Engineer | SDET | DevOps Automation Enthusiast
                         </h3>
                         <p className="text-md py-5 leading-8 max-w-xl mx-auto text-center dark:text-gray-200">
-                            Specializing in Arduino, drone projects, and DevOps automation management.
+                            A creative endeavor and analytical individual with a strong ability to perceive situations from a holistic standpoint. With over four years of experience in software development companies and multiple projects.
                         </p>
                     </div>
 
-                    <div className="flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-                        <AiFillTwitterCircle onClick={() => window.open('https://twitter.com/reinskywalker', '_blank')} className="cursor-pointer text-5xl" />
-                        <AiFillBehanceSquare onClick={() => window.open('https://www.behance.net/reinskywalker', '_blank')} className="cursor-pointer text-5xl" />
-                        <AiFillYoutube onClick={() => window.open('https://www.youtube.com/channel/UC_MUwevj9Etq95dZtJRPX4Q', '_blank')} className="cursor-pointer text-5xl" />
-                        <AiFillGithub onClick={() => window.open('https://github.com/reinskywalker', '_blank')} className="cursor-pointer text-5xl" />
-                    </div>
+                    <section id="experience" className="p-10 max-w-3xl mx-auto">
+                        <h3 className="text-3xl py-4 dark:text-white">Experience</h3>
+                        {works.map((work, index) => (
+                            <div key={index} className="py-6 border-b border-gray-300 dark:border-gray-700">
+                                <h4 className="text-xl font-bold dark:text-rose-300 mb-2">{work.title}</h4>
+                                <p className="text-md font-bold dark:text-gray-300 mb-1">{work.company}</p>
+                                <p className="text-md dark:text-gray-300 mb-4">{work.period}</p>
+                                <ul className="list-disc list-inside space-y-2 pl-5 dark:text-gray-200">
+                                    {work.responsibilities.map((item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </section>
 
-                    <div className="relative mx-auto bg-white bg-gradient-to-b from-rose-300 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 dark:bg-rose-300">
-                        <Image src={reinskywalker} alt='Reynaldi Lusikooy' layout='fill' objectFit='cover' />
-                    </div>
                 </section>
             </main>
         </div>
