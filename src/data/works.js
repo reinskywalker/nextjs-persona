@@ -1,5 +1,17 @@
 const works = [
   {
+    title: 'Fullstack Developer',
+    company: 'PT. Astera Digital Labs',
+    period: 'Dec 2023  - Present',
+    responsibilities: [
+      "Define and execute strategic vision, focusing on delivering innovative software solutions that elevate businesses.",
+      "Lead the development and implementation of software systems, leveraging your expertise to optimize operations and maximize efficiency.",
+      "Drive the development of fullstack software products, ensuring high standards of quality.",
+      "Spearhead the integration of AI technologies into business solutions, harnessing the power of data-driven insights to drive business growth.",
+      "Establish and maintain strong relationships with clients, partners, and stakeholders."
+    ]
+  },
+  {
     title: 'Lead Software Test Engineer',
     company: 'PT. Astra Graphia Information Technology (AGIT)',
     period: 'Mar 2022 - Present',
@@ -13,8 +25,8 @@ const works = [
     ],
   },
   {
-    title: 'Software Engineer',
-    company: 'PT Solusi Media Data',
+    title: 'Fullstack Developer',
+    company: 'PT. Solusi Media Data',
     period: 'Mar 2020 - Feb 2022',
     responsibilities: [
       'Played a role in developing mobile native applications for Asset Integrity applications at PT. Solusi Tunas Pratama, and OTDR Monitoring at PT. Bit Teknologi Nusantara, both catering to a concurrent user base exceeding 1,000 users.',
@@ -24,17 +36,6 @@ const works = [
       'Implemented automated tests for UI and backend using automated test libraries like Jest for unit testing, Cypress, and Selenium for API and UI testing, boasting a passing rate of more than 90% on the testing environment.',
       'Worked closely with IT Business Analysts to define business workflows, aligning software solutions with organizational needs.',
       'Proactively enhanced software products by resolving bugs, introducing innovative features, and optimizing functionalities, contributing to a substantial increase in customer satisfaction by more than 20%.',
-    ],
-  },
-  {
-    title: 'Social Media Manager',
-    company: 'atelier zürich',
-    period: 'Jan 2020 - Apr 2021',
-    responsibilities: [
-      'Orchestrated the development and execution of precise social media content strategies, ensuring consistent and timely postings across various platforms.',
-      'Applied creativity and design expertise to curate visually captivating and thematically aligned Instagram layouts for distinct photoshoot categories, reinforcing our social media presence.',
-      'Produced compelling video content that significantly drove engagement and conversion efforts, amplifying the brand’s online impact.',
-      'Maintained a proactive and responsive approach to social media interactions with customers, guided by data analytics and feedback, ensuring customer satisfaction and fostering brand loyalty.',
     ],
   },
   {
