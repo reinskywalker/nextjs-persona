@@ -56,10 +56,16 @@ export default function Portfolio() {
                         </p>
                     </div>
 
-                    <section id="experience" className="p-10 max-w-3xl mx-auto">
+                    <section id="experience" className="relative p-10 max-w-3xl mx-auto">
                         <h3 className="text-3xl py-4 dark:text-white">Experience</h3>
+
+                        {/* Timeline Line */}
+                        <div className="absolute left-4 top-16 bottom-0 w-[2px] bg-gray-300 dark:bg-gray-700"></div>
+
                         {works.map((work, index) => (
-                            <div key={index} className="py-6 border-b border-gray-300 dark:border-gray-700">
+                            <div key={index} className="relative py-6 pl-12">
+                                <div className="absolute left-0 top-6 w-3 h-3 bg-rose-500 rounded-full border-2 border-white dark:border-gray-900"></div>
+
                                 <h4 className="text-xl font-bold dark:text-rose-300 mb-2">{work.title}</h4>
                                 <p className="text-md font-bold dark:text-gray-300 mb-1">{work.company}</p>
                                 <p className="text-md dark:text-gray-300 mb-4">{work.period}</p>
@@ -71,6 +77,7 @@ export default function Portfolio() {
                             </div>
                         ))}
                     </section>
+
 
                 </section>
             </main>
