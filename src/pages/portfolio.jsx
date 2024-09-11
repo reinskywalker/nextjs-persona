@@ -24,7 +24,7 @@ export default function Portfolio() {
 
 
                     <div className="text-center max-w-3xl mx-auto">
-                        <h2 className="text-5xl py-2 text-gray-600 dark:text-silver font-bold md:text-6xl">
+                        <h2 className="text-5xl py-2 text-gray-500 dark:text-silver font-bold md:text-6xl">
                             Andre <strong>Reynaldi</strong> Lusikooy.
                         </h2>
                         <h3 className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300">

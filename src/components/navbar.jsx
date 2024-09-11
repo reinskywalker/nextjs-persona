@@ -13,16 +13,14 @@ export default function Navbar({ toggleDarkMode }) {
             <ul className="flex items-center space-x-8">
                 <li
                     className={`hover:text-rose-600 cursor-pointer ${router.pathname === '/' ? 'text-rose-600 dark:text-rose-400' : 'dark:text-gray-300'
-                        }`}
-                >
+                        }`}>
                     <Link href="/" passHref>
                         Home
                     </Link>
                 </li>
                 <li
                     className={`hover:text-rose-600 cursor-pointer ${router.pathname === '/portfolio' ? 'text-rose-600 dark:text-rose-400' : 'dark:text-gray-300'
-                        }`}
-                >
+                        }`}>
                     <Link href="/portfolio" passHref>
                         Portfolio
                     </Link>
