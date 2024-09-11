@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { AiFillTwitterCircle, AiFillYoutube, AiFillGithub, AiFillBehanceSquare } from 'react-icons/ai';
 import reinskywalker from '@img/manhwa.png';
 import { useDarkMode } from '../hooks/darkMode';
-import Navbar from '../components/Navbar';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/footer';
 
 export default function Home() {
