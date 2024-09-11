@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import works from '../data/works';
 import Navbar from '@/components/navbar';
 import { useDarkMode } from '../hooks/darkMode';
+import Footer from '@/components/footer';
 
 export default function Portfolio() {
     const [darkMode, toggleDarkMode] = useDarkMode();
@@ -54,6 +55,7 @@ export default function Portfolio() {
                     </section>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }

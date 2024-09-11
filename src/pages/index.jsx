@@ -4,6 +4,7 @@ import { AiFillTwitterCircle, AiFillYoutube, AiFillGithub, AiFillBehanceSquare }
 import reinskywalker from '@img/manhwa.png';
 import { useDarkMode } from '../hooks/darkMode';
 import Navbar from '../components/Navbar';
+import Footer from '@/components/footer';
 
 export default function Home() {
     const [darkMode, toggleDarkMode] = useDarkMode();
@@ -59,6 +60,7 @@ export default function Home() {
                     </div>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }
