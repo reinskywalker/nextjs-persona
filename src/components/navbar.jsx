@@ -6,7 +6,7 @@ export default function Navbar({ toggleDarkMode }) {
     const router = useRouter();
 
     return (
-        <nav className="py-5 mb-12 flex justify-between items-center text-gray-800 dark:text-gray-200 sticky top-0 bg-silver dark:bg-gray-1000 z-50">
+        <nav className="py-5 mb-12 flex justify-between items-center text-gray-800 dark:text-gray-200 sticky top-0 bg-white dark:bg-gray-900 z-50 w-full">
             <h1 className="text-xl font-bold">
                 rein <span className="text-rose-600 dark:text-silver">skywalker.</span>
             </h1>
