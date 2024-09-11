@@ -1,10 +1,13 @@
 {
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
   "editor.formatOnType": false,
-  "eslint.format.enable": false,
+  "eslint.format.enable": true,
   "[javascript]": {
-    "editor.defaultFormatter": null
-  },
-  "prettier.enable": false
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }, 
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+  "prettier.enable": true
 }
