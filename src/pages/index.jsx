@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { AiFillTwitterCircle, AiFillYoutube, AiFillGithub, AiFillBehanceSquare } from 'react-icons/ai';
-import reinskywalker from '@img/manhwa.png';
+import img_light from '@img/reinskywalker-light.png';
+import img_dark from '@img/reinskywalker-dark.png';
 import { useDarkMode } from '../hooks/darkMode';
 import Navbar from '@component/navbar';
 import Footer from '@component/footer';
@@ -12,7 +13,7 @@ export default function Home() {
     return (
         <div className={darkMode ? 'dark' : ''}>
             <Head>
-                <title>Reynaldi Lusikooy | Portfolio</title>
+                <title>Reynaldi Lusikooy</title>
                 <meta name="description" content="A bit of myself." />
                 <link rel="icon" href="/image/avatar.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,8 +56,8 @@ export default function Home() {
                         />
                     </div>
 
-                    <div className="relative mx-auto bg-silver bg-gradient-to-b from-gray-300 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 dark:bg-gray-800 dark:from-gray-600">
-                        <Image src={reinskywalker} alt='Reynaldi Lusikooy' layout='fill' objectFit='cover' />
+                    <div className="relative absolute inset-0 bg-black rounded-full mx-auto bg-silver bg-gradient-to-b from-gray-300 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 dark:bg-gray-800 dark:from-gray-600">
+                        <Image src={darkMode ? img_dark : img_light} alt='Reynaldi Lusikooy' layout='fill' objectFit='cover' />
                     </div>
                 </section>
             </main>
