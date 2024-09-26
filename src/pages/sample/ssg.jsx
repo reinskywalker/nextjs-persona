@@ -3,13 +3,13 @@ import { useDarkMode } from '../../hooks/darkMode';
 import Navbar from '@component/navbar';
 import Footer from '@component/footer';
 import offset from '@/data/offset';
-import { pokeDetail } from '@/data/endpoint';
+import { pokeDetail, pokeIndex } from '@/data/endpoint';
 
 // Static Site Generation (SSG)
 export async function getStaticProps() {
     try {
         // fungsi getStaticProps dieksekusi pada proses build
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${offset.value}&offset=0`);
+        const res = await fetch(pokeIndex(offset.value));
         const data = await res.json();
 
         // fetch setiap data pokemon name, image, dan id
@@ -25,14 +25,14 @@ export async function getStaticProps() {
         return {
             props: {
                 pokemons: pokemonsWithImages,
-            },
+            }
         };
     } catch (error) {
         console.error('Error fetching Pokémon:', error);
         return {
             props: {
                 pokemons: [],
-            },
+            }
         };
     }
 }

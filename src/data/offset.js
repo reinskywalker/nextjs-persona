@@ -1,5 +1,5 @@
 const offset = {
-    value: 500  ,
+    value: 1000  ,
 }
 
 export default offset;

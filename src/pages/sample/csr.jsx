@@ -5,6 +5,7 @@ import Navbar from '@component/navbar';
 import Footer from '@component/footer';
 import offset from '@/data/offset';
 import { pokeDetail, pokeIndex } from '@/data/endpoint';
+
 export default function Home() {
     const [darkMode, toggleDarkMode] = useDarkMode();
     const [pokemons, setPokemons] = useState([]);
