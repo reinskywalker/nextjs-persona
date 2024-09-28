@@ -57,7 +57,13 @@ export default function Home() {
                     </div>
 
                     <div className="relative absolute inset-0 bg-black rounded-full mx-auto bg-silver bg-gradient-to-b from-gray-300 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 dark:bg-gray-800 dark:from-gray-600">
-                        <Image src={darkMode ? img_dark : img_light} alt='Reynaldi Lusikooy' layout='fill' objectFit='cover' />
+                        <Image 
+                            src={darkMode ? img_dark : img_light} 
+                            alt='Reynaldi Lusikooy' 
+                            fill
+                            objectFit='cover' 
+                            quality={50}
+                        />
                     </div>
                 </section>
             </main>
