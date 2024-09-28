@@ -1,30 +1,31 @@
 {
-  "name": "reinskywalker-nextjs-persona",
-  "version": "1.1.0",
-  "homepage": "https://reinskywalker.github.io/nextjs-persona",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build && next export",
-    "deploy": "gh-pages -d out"
-  },
-  "dependencies": {
-    "eslint": "8.32.0",
-    "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "react-window": "^1.8.10"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.12",
-    "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1",
-    "postcss": "^8.4.16",
-    "tailwindcss": "^3.1.8"
-  }
+    "name": "reinskywalker-nextjs-persona",
+    "version": "1.1.0",
+    "homepage": "https://reinskywalker.github.io/nextjs-persona",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "predeploy": "npm run build && next export",
+        "deploy": "gh-pages -d out"
+    },
+    "dependencies": {
+        "dom-helpers": "^5.2.1",
+        "eslint": "8.32.0",
+        "eslint-config-next": "13.1.6",
+        "next": "13.1.6",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-icons": "^4.4.0",
+        "react-window": "^1.8.10"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.12",
+        "eslint": "8.24.0",
+        "eslint-config-next": "12.3.1",
+        "postcss": "^8.4.16",
+        "tailwindcss": "^3.1.8"
+    }
 }

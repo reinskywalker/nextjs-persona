@@ -1,12 +1,26 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { FixedSizeList as List } from 'react-window';
-import portfolio from '../data/portfolio'
+import portfolio from '../data/portfolio';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import { useDarkMode } from '../hooks/darkMode';
+import { useState } from 'react';
 
 export default function Portfolio() {
     const [darkMode, toggleDarkMode] = useDarkMode();
+    const [isImageOpen, setIsImageOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const openImageModal = (image) => {
+        setSelectedImage(image);
+        setIsImageOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsImageOpen(false);
+        setSelectedImage(null);
+    };
 
     const Row = ({ index, style }) => {
         const item = portfolio[index];
@@ -20,22 +34,24 @@ export default function Portfolio() {
         return (
             <div style={style} className="p-4 hover:bg-rose-100 dark:hover:bg-gray-800 hover:shadow-lg transition duration-600 flex">
                 <div className="w-1/3 pr-6">
-                    <img
+                    <Image
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-auto rounded-lg shadow-md"
+                        width={300}
+                        height={200}
+                        quality={50}
+                        className="w-full h-auto rounded-lg shadow-md cursor-pointer"
+                        onClick={() => openImageModal(item.image)}
                     />
                 </div>
                 <div className="w-2/3">
                     <h4 className="text-xl font-bold text-gray-600 dark:text-silver mb-2">{item.title}</h4>
-
                     <p
                         className="text-md text-gray-700 dark:text-gray-300 mb-4 truncate hover:cursor-pointer"
                         title={item.description}
                     >
                         {truncatedDescription}
                     </p>
-
                     <a href={item.url} className="text-rose-500 hover:text-rose-600 dark:text-silver" target="_blank" rel="noopener noreferrer">
                         View Project
                     </a>
@@ -74,6 +90,30 @@ export default function Portfolio() {
             </main>
 
             <Footer />
+
+            {isImageOpen && (
+                <div
+                    className="fixed inset-0 z-50 bg-black bg-opacity-70 flex justify-center items-center"
+                    onClick={closeModal}
+                >
+                    <div className="relative bg-white dark:bg-gray-800 p-4 rounded-lg">
+                        <button
+                            className="absolute top-2 right-2 text-white bg-gray-900 dark:bg-white dark:text-gray-900 p-2 rounded-full"
+                            onClick={closeModal}
+                        >
+                            &times;
+                        </button>
+                        <Image
+                            src={selectedImage}
+                            alt="Larger View"
+                            width={1200}
+                            height={800}
+                            quality={100}
+                            className="rounded-lg"
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
