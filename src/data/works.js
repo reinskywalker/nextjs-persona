@@ -1,5 +1,5 @@
 const works = [{
-        title: 'Fullstack Developer',
+        title: 'Founder',
         company: 'PT. Astera Digital Labs',
         period: 'Dec 2023  - Present',
         responsibilities: [
