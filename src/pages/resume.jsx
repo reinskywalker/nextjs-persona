@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import works from '../data/works';
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/NavBar';
 import { useDarkMode } from '../hooks/darkMode';
-import Footer from '@/components/footer';
+import Footer from '@/components/Footer';
 
 export default function Portfolio() {
     const [darkMode, toggleDarkMode] = useDarkMode();
@@ -41,20 +41,20 @@ export default function Portfolio() {
                         <div className="absolute left-5 top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-gray-700"></div>
                         {works.map((work, index) => (
                             <div
-                            key={index}
-                            className="relative py-6 pl-10 hover:bg-rose-100 dark:hover:bg-gray-800 hover:shadow-lg transition duration-600"
-                          >
-                            <div className="absolute left-3 top-8 w-4 h-4 bg-gray-600 rounded-full border-2 border-white dark:border-gray-900"></div>
-                            <h4 className="text-xl font-bold text-gray-600 dark:text-silver mb-2">{work.title}</h4>
-                            <p className="text-md font-bold text-gray-600 dark:text-gray-300 mb-1">{work.company}</p>
-                            <p className="text-md text-gray-700 dark:text-gray-300 mb-4">{work.period}</p>
-                            <ul className="list-disc list-inside space-y-2 pl-5 text-gray-700 dark:text-gray-200">
-                              {work.responsibilities.map((item, idx) => (
-                                <li key={idx}>{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          
+                                key={index}
+                                className="relative py-6 pl-10 hover:bg-rose-100 dark:hover:bg-gray-800 hover:shadow-lg transition duration-600"
+                            >
+                                <div className="absolute left-3 top-8 w-4 h-4 bg-gray-600 rounded-full border-2 border-white dark:border-gray-900"></div>
+                                <h4 className="text-xl font-bold text-gray-600 dark:text-silver mb-2">{work.title}</h4>
+                                <p className="text-md font-bold text-gray-600 dark:text-gray-300 mb-1">{work.company}</p>
+                                <p className="text-md text-gray-700 dark:text-gray-300 mb-4">{work.period}</p>
+                                <ul className="list-disc list-inside space-y-2 pl-5 text-gray-700 dark:text-gray-200">
+                                    {work.responsibilities.map((item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+
                         ))}
                     </section>
                 </section>
