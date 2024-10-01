@@ -2,9 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { FixedSizeList as List } from 'react-window';
 import portfolio from '../data/portfolio';
-import Navbar from '@/components/NavBar';
-import Footer from '@/components/Footer';
-import { useDarkMode } from '../hooks/darkMode';
+import Navbar from '@organisms/Navbar';
+import Footer from '@/components/organisms/Footer';
+import { useDarkMode } from '@hooks/darkMode';
 import { useState } from 'react';
 
 export default function Portfolio() {

@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import works from '../data/works';
-import Navbar from '@/components/NavBar';
-import { useDarkMode } from '../hooks/darkMode';
-import Footer from '@/components/Footer';
+import Navbar from '@organisms/Navbar';
+import { useDarkMode } from '@hooks/darkMode';
+import Footer from '@/components/organisms/Footer';
 
 export default function Portfolio() {
     const [darkMode, toggleDarkMode] = useDarkMode();

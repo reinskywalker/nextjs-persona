@@ -1,10 +1,20 @@
-// Home.js
-import { MainTemplate } from '../components/templates/MainTemplate';
-import { useDarkMode } from '../hooks/darkMode';
+import { useEffect, useState } from 'react';
+import MainTemplate from '@/components/templates/MainTemplate';
+import { useDarkMode } from '@hooks/darkMode';
 import Head from 'next/head';
 
-export default function Home() {
+function Home() {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     const [darkMode, toggleDarkMode] = useDarkMode();
+
+    if (!isMounted) {
+        return null;
+    }
 
     return (
         <>
@@ -19,3 +29,5 @@ export default function Home() {
         </>
     );
 }
+
+export default Home;
